@@ -73,3 +73,6 @@ module.exports.bronKerbosch = (R, P, X, graph) => {
   }
   return cliques;
 };
+
+module.exports.combinations = (array) =>
+  array.flatMap((a, i) => array.slice(i + 1).map((b) => [a, b]));
